@@ -1,0 +1,22 @@
+ALGORITHM sentence;
+VAR
+    sent:STRING;
+    numbCar, numbWord, numbVow:INTEGER;
+BEGIN
+    Write('Please enter a meaningful sentence that ends with a point')
+    Read (sent)
+    numbCar := 0
+    FOR i from 0 to length(sent) do 
+    IF (sent[i]<>' ' or '.') THEN
+    numbCar := numbCar + 1;
+    END_IF
+    ELSE numbWord := numbWord + 1;
+    IF (sent [i] in [a, e, u, i, o, y]) THEN
+    numbVow := numbVow + 1;
+    END_IF
+    END_FOR
+
+
+
+
+End
